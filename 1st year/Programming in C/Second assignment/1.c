@@ -5,7 +5,7 @@ void FindMinMax(int sir[], int *maxim, int *minim);
 
 int main()
 {
-    int maxim = -0x3f3f3f3f, minim = 0x3f3f3f, sir[5];
+    int maxim = -0x3f3f3f3f, minim = 0x3f3f3f3f, sir[5];
     int i = 0;
     for ( i = 0; i < 5; ++i)
     {
