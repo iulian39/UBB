@@ -18,7 +18,7 @@ int main()
 
     printf("The maxim value is %d\nThe minim value is %d\n", maxim, minim);
     maxim = -0x3f3f3f3f;
-    minim = 0x3f3f3f;
+    minim = 0x3f3f3f3f;
     int *ptr1 = &maxim, *ptr2 = &minim;
     FindMinMax(sir, ptr1, ptr2);
     printf("The maxim value is %d\nThe minim value is %d\n", maxim, minim);
