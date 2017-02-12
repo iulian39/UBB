@@ -1,3 +1,23 @@
+'''Create a Python module that contains an iterable data structure, a sort method and a filter method,
+together with comprehensive PyUnit unit tests. The module must be reusable in other projects.
+Update your Lab5-8 program to use the data structure and both functions from this module.
+What you will need to do:
+ Implement an iterable data structure. Study the __setItem__, __delItem__, __next__ and __iter__
+Python methods.
+ Implement a sorting algorithm that is not studied during the lecture or seminar (no bubble
+sort, cocktail sort, merge sort, insert sort, quicksort). You can use one of shell sort, comb sort,
+bingo sort, gnome sort, or other sorting method. Determine the time complexity of the selected
+algorithm and prove that you understand it. The sort function will accept two parameters: the
+list to be sorted as well as a comparison function used to determine the order between two
+elements.
+ Implement a filter function that can be used to filter the elements from a list. The function will
+use 2 parameters: the list to be filtered, and an acceptance function that decided whether a
+given value passes the filter.
+Observations:
+1. Use your data structure in the program’s repository classes.
+2. The sort / filter functions will replace the current implementation within the repository and
+controller layers.'''
+
 from copy import deepcopy
 
 class Module:
