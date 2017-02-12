@@ -1,0 +1,50 @@
+1;Faust;NAN;Ghoethe
+2;Agonie si extaz;NAN;Irving Stone
+3;Romanul adolescentului miop;;Mircea Eliade
+4;Invita?ie la vals;NAN;Mihail Drume?
+5;Exerci?ii de echilibru;NAN;Tudor Chirila
+6;Maitreyi;NAN;Mircea Eliade
+7;Cismigiu et comp;NAN;Grigore Bajenaru
+8;Jurnal 2003 – 2009;NAN;Oana Pellea
+9;Pânza de paianjen;NAN;Cella Serghi
+10;You are not so smart;NAN;David McRainey
+11;Gândire rapida, gândire lenta;NAN;Daniel Kahneman
+12;A da ?i a lua;NAN;Adam Grant
+13;Adevarul cinstit despre necinste;NAN;Dan Ariely
+14;This will make you smarter;NAN;John Brockman
+15;The Power of habit;NAN;Charles Duhigg
+16;Musai List;NAN;Octavian Panti?
+17;Startup de 100$;NAN;Chris Guillebea
+18;The Personal MBA;NAN;Josh Kaufman
+19;O singura ?coala pentru toata lumea;NAN;Salman Khan
+20;Toate sfâr?iturile sunt la fel;NAN;Andrei Cioata
+21;Confesiunile unui vorbitor în public;NAN;Scott Berkun
+22;The Element;NAN;Sir Ken Robinson
+23;Memoria inteligenta;NAN;Joshua Foer
+24;The Paleo Solution;NAN;Robb Wolf
+25;Open;NAN;Tudor Chirila
+26;Kitchen Confidential;NAN;Anthony Bourdain
+27;Quiet;NAN;Susan Cain
+28;Starea de flux;NAN;Oana Pellea
+29;The Inner Game of Tennis;NAN;Cella Serghi
+30;Toate sfâr?iturile sunt la fel;NAN;Andrei Cioata
+31;Faust;NAN;Ghoethe
+32;Agonie si extaz;NAN;Irving Stone
+33;Romanul adolescentului miop;NAN;Mircea Eliade
+34;Invita?ie la vals;NAN;Mihail Drume?
+35;Exerci?ii de echilibru;NAN;Tudor Chirila
+36;Maitreyi;NAN;Mircea Eliade
+37;Cismigiu et comp;NAN;Grigore Bajenaru
+38;Jurnal 2003 – 2009;NAN;Oana Pellea
+39;Pânza de paianjen;NAN;Cella Serghi
+40;Mastery;NAN;Andrei Cioata
+41;Codul talentului;NAN;Ghoethe
+42;Agonie si extaz;NAN;Irving Stone
+43;Romanul adolescentului miop;NAN;Mircea Eliade
+44;Invita?ie la vals;NAN;Mihail Drume?
+45;Exerci?ii de echilibru;NAN;Tudor Chirila
+46;Buzz Marketing;NAN;Mircea Eliade
+47;Cismigiu et comp;NAN;Grigore Bajenaru
+48;Jurnal 2003 – 2009;NAN;Oana Pellea
+49;Pânza de paianjen;NAN;Cella Serghi
+50;Toate sfâr?iturile sunt la fel;NAN;Andrei Cioata
