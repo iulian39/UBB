@@ -1,8 +1,9 @@
 #include <stdio.h>
-int nr1, nr2;
-int *ptr;
+
 int main()
 {
+ int nr1, nr2;
+ int *ptr;
  nr1 = 1;
  nr2 = 2;
  ptr = &nr1;
