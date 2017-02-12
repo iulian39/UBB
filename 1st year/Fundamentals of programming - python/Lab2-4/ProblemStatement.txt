@@ -1,26 +1,55 @@
-LIBRARY
-Write an application for a book library. The application will store:
- Book: <bookId>, <title>, <description>, <author>.
- Client: <clientId>, <name>.
- Rental: <rentalID>, <bookId>, <clientId>, <rented date>, <due date>, <returned date>.
-Create an application which allows the user to:
-1. Manage the list of clients and available books. The application must allow the user to add,
-remove, update, and list both clients and books.
-2. Rent or return a book. A client can rent an available book until a given date. A client can return
-a rented book at any time. Only available books can be rented.
-3. Search for clients or books using any one of their fields (e.g. books can be searched for using id,
-title, description or author). The search must work using case-insensitive, partial string
-matching, and must return all matching items.
-4. Create statistics:
-o Most rented books. This will provide the list of books, sorted in descending order of the
-number of times they were rented or the number of days they were rented.
-o Most active clients. This will provide the list of clients, sorted in descending order of the
-number of book rental days they have (e.g. having 2 rented books for 3 days each counts
-as 2 x 3 = 6 days).
-o Most rented author. This provides the list of book authored, sorted in descending order
-of the total number of rentals their books have.
-o Late rentals. All the books that are currently rented, for which the due date for return
-has passed, sorted in descending order of the number of days of delay.
-5. Unlimited undo/redo functionality. Each step will undo/redo the previous operation
-performed by the user. Undo/redo operations must cascade and have a memory-efficient
-implementation (no superfluous list copying).
+ FAMILY EXPENSES
+A family wants to manage their monthly expenses. In order to complete this task, the family needs an
+application to store, for a given month, all their expenses. Each expense will be stored in the
+application using the following elements: day (of the month in which it was made, between 1 and 30),
+amount of money (positive integer) and expense type (one of: housekeeping, food, transport,
+clothing, internet, others). The family needs an application that provides the following functionalities
+(each functionality is exemplified):
+1. Add a new expense into the list.
+add <sum> <category>
+insert <day> <sum> <category>
+e.g.
+add 10 internet – add to the current day an expense of 10 RON for internet.
+insert 25 100 food – insert to day 25 an expense of 100 RON for food.
+Babeș-Bolyai University
+Cluj Napoca
+Faculty of Mathematics and Computer Science
+Fundamentals of Programming
+2. Modify expenses from the list.
+remove <day>
+remove <start day> to <end day>
+remove <category>
+e.g.
+remove 15 – remove all the expenses for day 15.
+remove 2 to 9 – remove all the expenses between day 2 and day 9.
+remove food – remove all the expenses for food from the current month.
+3. Write the expenses having different properties.
+list
+list <category>
+list <category> [ < | = | > ] <value>
+e.g.
+list – write the entire list of expenses.
+list food – write all the expenses for food.
+list food > 5 - writes all expenses for food with an amount of money > 5.
+list internet = 44 - writes all expenses for internet with an amount of money = 44.
+4. Obtain different characteristics of sublists.
+sum <category>
+max <day>
+sort <day>
+sort <category>
+e.g.
+sum food – write the total expense for category food.
+max day – write the day with the maximum expenses.
+sort day – write the total daily expenses in ascending order by amount of money spent.
+sort food – write the daily expenses for category food in ascending order by amount of money
+spent.
+5. Filter the list of expenses.
+filter <category>
+filter <category> [ < | = | > ] <value>
+e.g.
+filter food – keep only expenses in category food.
+filter books < 100 – keep only expenses in category books with amount of money < 100 RON
+filter clothing = 59 – keep only expenses for clothing with amount of money = 59 RON
+6. Undo the last operation that modified program data.
+undo – the last operation that has modified program data will be reversed. The user has to be
+able to undo all operations performed since program start by repeatedly calling this function.
