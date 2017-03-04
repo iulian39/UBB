@@ -107,14 +107,15 @@ int* FindLongestSubsequence()
     int *sir1 = ReadArray();
     int len_sir = 0;
     for (i = 0; i < 200; i++) {
-        if (sir1[i] == 0) break;
+        if (sir1[i] == 0) 
+            break;
         len_sir = i + 1;
     }
     for (i = 0; i < len_sir - 1; ++i)
         if (sir1[i] < sir1[i + 1])
         {
             cnt = 2;
-            for ( j = i + 1; j < len_sir - 1; ++j )
+            for ( j = i + 1; j <= len_sir - 1; ++j )
                 if(sir1[j] < sir1[j + 1])
                     cnt++;
                 else
