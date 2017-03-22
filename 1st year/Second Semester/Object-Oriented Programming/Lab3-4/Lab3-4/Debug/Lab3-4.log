@@ -1,0 +1,16 @@
+﻿  main.c
+  UndoBonus.c
+c:\users\iulian\desktop\lab 3-4\lab 3-4\lab3-4\lab3-4\undobonus.c(33): warning C4013: 'isFull' undefined; assuming extern returning int
+c:\users\iulian\desktop\lab 3-4\lab 3-4\lab3-4\lab3-4\undobonus.c(41): warning C4013: 'isEmpty' undefined; assuming extern returning int
+  UI.c
+c:\users\iulian\desktop\lab 3-4\lab 3-4\lab3-4\lab3-4\ui.c(338): warning C4013: 'undoB' undefined; assuming extern returning int
+c:\users\iulian\desktop\lab 3-4\lab 3-4\lab3-4\lab3-4\ui.c(344): warning C4013: 'redoB' undefined; assuming extern returning int
+  Operations.c
+  MedRepo.c
+  Controller.c
+c:\users\iulian\desktop\lab 3-4\lab 3-4\lab3-4\lab3-4\controller.c(139): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+c:\users\iulian\desktop\lab 3-4\lab 3-4\lab3-4\lab3-4\controller.c(396): warning C4133: 'function': incompatible types - from 'CopyLists *' to 'OperationsStack *'
+c:\users\iulian\desktop\lab 3-4\lab 3-4\lab3-4\lab3-4\controller.c(416): warning C4133: 'function': incompatible types - from 'CopyLists *' to 'OperationsStack *'
+  Generating Code...
+  Lab3-4.vcxproj -> C:\Users\iulian\Desktop\Lab 3-4\Lab 3-4\Lab3-4\Debug\Lab3-4.exe
+  Lab3-4.vcxproj -> C:\Users\iulian\Desktop\Lab 3-4\Lab 3-4\Lab3-4\Debug\Lab3-4.pdb (Partial PDB)
