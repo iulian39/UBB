@@ -101,30 +101,3 @@ int Repository::getLenght()
 	return this->list.size();
 }
 
-
-
-/*vector <Tutorial> operator + (const vector <Tutorial> &a, const Tutorial &b) {
-	vector <Tutorial> ret = a;
-	ret.push_back(b);
-	return ret;
-}
-
-vector <Tutorial> operator + (const Tutorial &b, const vector <Tutorial> &a) {
-	vector <Tutorial> ret = a;
-	ret.push_back(b);
-	return ret;
-}
-
-vector <Tutorial> operator - (const vector <Tutorial> &a, const Tutorial &b) {
-	vector <Tutorial> ret = a;
-	//ret.remove(b);
-	ret.erase(remove(ret.begin(), ret.end(), b), ret.end());
-	return ret;
-}
-
-bool Repository::findTutorial(Tutorial t) {
-	for (int i = 0; i < _list.size(); ++i)
-		if (_list[i] == t)
-			return 1;
-	return 0;
-	}*/
