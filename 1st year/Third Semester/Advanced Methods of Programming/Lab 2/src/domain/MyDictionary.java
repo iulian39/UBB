@@ -1,5 +1,6 @@
 package domain;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,8 +51,18 @@ public class MyDictionary<Key, Value>
         {
             buff.append(d.getKey());
             buff.append(d.getValue());
+
         }
         return buff.toString();
+    }
+
+    public Collection<Value> values() {
+        return this._dictinary.values();
+    }
+
+    public Map<Key, Value> getAll()
+    {
+        return this._dictinary;
     }
 
 }

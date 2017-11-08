@@ -1,6 +1,7 @@
-package domain;
+package domain.Statements;
 
 import domain.Expressions.Expression;
+import domain.PrgState;
 import domain.Statements.IStatement;
 
 import java.util.List;

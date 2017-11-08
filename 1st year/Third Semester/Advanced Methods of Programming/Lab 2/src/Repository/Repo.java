@@ -1,28 +1,43 @@
 package Repository;
 
 import domain.PrgState;
+import domain.Statements.IStatement;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Repo implements IRepo {
-    private List<PrgState> _prgStateList;
+    private PrgState _prgStateList;
+    private String logFile;
 
-    public Repo(PrgState state)
+    public Repo(PrgState state, String logFile)
     {
-        this._prgStateList = new ArrayList<>();
-        this._prgStateList.add(state);
+        this._prgStateList = state;
+        this.logFile = logFile;
     }
 
     @Override
     public PrgState getCurrentPrgState()
     {
-        return _prgStateList.get(0);
+        return _prgStateList;
     }
 
+
     @Override
-    public void addPrgState(PrgState p)
-    {
-        this._prgStateList.add(p);
+    public void logPrgStateExec() throws IOException {
+        PrintWriter printWriter = new PrintWriter(new FileWriter(this.logFile, true));
+
+        printWriter.println("ExeStack:");
+        printWriter.println(this._prgStateList.get_exeStack().toString());
+        printWriter.println("SymTable:");
+        printWriter.println(this._prgStateList.get_symbolTable().toString());
+        printWriter.println("Message:");
+        printWriter.println(this._prgStateList.get_messages().toString());
+        printWriter.println();
+
+        printWriter.close();
     }
 }

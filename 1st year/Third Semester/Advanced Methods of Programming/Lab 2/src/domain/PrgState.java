@@ -2,19 +2,28 @@ package domain;
 
 import domain.Statements.IStatement;
 
-import java.util.List;
 
 public class PrgState {
     private MyDictionary<String, Integer> _symbolTable;
     private MyStack<IStatement> _exeStack;
     private MyList<Integer> _messages;
     private IStatement _stmt;
+    private FileTable<Integer,  FileData> fileTable;
 
-    public PrgState(MyStack<IStatement> exeStack, MyDictionary<String, Integer> symTable, MyList<Integer> list, IStatement stmt) {
+    public PrgState(MyStack<IStatement> exeStack, MyDictionary<String, Integer> symTable, MyList<Integer> list, IStatement stmt, FileTable<Integer,  FileData> fileTable) {
         this._exeStack = exeStack;
         this._symbolTable = symTable;
         this._messages = list;
         this._stmt = stmt;
+        this.fileTable = fileTable;
+    }
+
+    public PrgState(IStatement prg) {
+        this._exeStack = new MyStack<>();
+        this._symbolTable = new MyDictionary<>();
+        this._messages = new MyList<>();
+        this.fileTable = new FileTable<>();
+        this._exeStack.push(prg);
     }
 
 
@@ -38,6 +47,19 @@ public class PrgState {
     public IStatement get_stmt() {
         return _stmt;
     }
+
+    public FileTable<Integer, FileData> getFileTable() {
+        return fileTable;
+    }
+
+    public FileData getFileData(int nr) {
+        return fileTable.get(nr);
+    }
+
+    public void setFileTable(FileTable<Integer, FileData> fileTable) {
+        this.fileTable = fileTable;
+    }
+
 
     public void set_symbolTable(MyDictionary<String, Integer> _symbolTable) {
         this._symbolTable = _symbolTable;

@@ -22,6 +22,7 @@ public class MyList<T> {
         for ( T i : l)
         {
             buff.append(i);
+            buff.append(" ");
         }
         return buff.toString();
     }
