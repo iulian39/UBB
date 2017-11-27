@@ -19,7 +19,7 @@ public class ReadFileStatement implements IStatement {
 
     @Override
     public PrgState execute(PrgState state) throws IOException, FileAlreadyOpenedException, FileNotOpenException {
-        int fd = this.expression.eval(state.get_symbolTable());
+        int fd = this.expression.eval(state.get_symbolTable(), state.getHeap());
 
         FileData br = state.getFileData(fd);
         if (br == null)

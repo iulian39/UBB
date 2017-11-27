@@ -50,4 +50,17 @@ public class FileTable<K,V> implements IFileTable<K,V>
     public Collection<V> values() {
         return this.fileTable.values();
     }
+
+    @Override
+    public String toString() {
+        StringBuffer buff = new StringBuffer();
+        for( K i : fileTable.keySet())
+        {
+            buff.append(i);
+            buff.append(" ");
+            buff.append(fileTable.get(i).toString());
+            buff.append("\n");
+        }
+        return buff.toString();
+    }
 }

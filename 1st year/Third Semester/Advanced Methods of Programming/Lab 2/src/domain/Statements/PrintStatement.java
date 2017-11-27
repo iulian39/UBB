@@ -21,7 +21,7 @@ public class PrintStatement implements IStatement {
     @Override
     public PrgState execute(PrgState prg) {
 
-        int r = exp.eval(prg.get_symbolTable());
+        int r = exp.eval(prg.get_symbolTable(), prg.getHeap());
         prg.get_messages().add(r);
         return prg;
 

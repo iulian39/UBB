@@ -1,119 +1,142 @@
 ExeStack:
-a=2 + 3 * 5 ( b=a + 1, Print (b) ) 
-SymTable:
-
-Message:
-
-
-ExeStack:
-( b=a + 1, Print (b) ) 
-SymTable:
-a17
-Message:
-
-
-ExeStack:
-b=a + 1 Print (b) 
-SymTable:
-a17
-Message:
-
-
-ExeStack:
-Print (b) 
-SymTable:
-a17b18
-Message:
-
-
-ExeStack:
-
-SymTable:
-a17b18
-Message:
-18 
-
-ExeStack:
 openRFile (var_f, a.txt) ( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
 SymTable:
 
 Message:
 
+Heap:
+
+FileTable:
+
 
 ExeStack:
 ( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
 SymTable:
-var_f3
+var_f1
 Message:
+
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
 
 
 ExeStack:
 ReadFileStatement (var_f, var_c) ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
 SymTable:
-var_f3
+var_f1
 Message:
+
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
 
 
 ExeStack:
 ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
 SymTable:
-var_f3var_c15
+var_f1var_c15
 Message:
+
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
 
 
 ExeStack:
 Print (var_c) ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
 SymTable:
-var_f3var_c15
+var_f1var_c15
 Message:
+
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
 
 
 ExeStack:
 ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
 SymTable:
-var_f3var_c15
+var_f1var_c15
 Message:
 15 
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
+
 
 ExeStack:
 If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0) CloseFileStatement (var_f) 
 SymTable:
-var_f3var_c15
+var_f1var_c15
 Message:
 15 
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
+
 
 ExeStack:
 ( ReadFileStatement (var_f, var_c), Print (var_c) ) CloseFileStatement (var_f) 
 SymTable:
-var_f3var_c15
+var_f1var_c15
 Message:
 15 
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
+
 
 ExeStack:
 ReadFileStatement (var_f, var_c) Print (var_c) CloseFileStatement (var_f) 
 SymTable:
-var_f3var_c15
+var_f1var_c15
 Message:
 15 
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
+
 
 ExeStack:
 Print (var_c) CloseFileStatement (var_f) 
 SymTable:
-var_f3var_c50
+var_f1var_c0
 Message:
 15 
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
+
 
 ExeStack:
 CloseFileStatement (var_f) 
 SymTable:
-var_f3var_c50
+var_f1var_c0
 Message:
-15 50 
+15 0 
+Heap:
+
+FileTable:
+1 domain.FileData@b4c966a
+
 
 ExeStack:
 
 SymTable:
-var_f3var_c50
+var_f1var_c0
 Message:
-15 50 
+15 0 
+Heap:
+
+FileTable:
+
 

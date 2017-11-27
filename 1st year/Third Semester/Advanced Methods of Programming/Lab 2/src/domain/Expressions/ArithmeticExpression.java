@@ -1,8 +1,10 @@
 package domain.Expressions;
 
+import domain.Heap;
 import domain.MyDictionary;
 import exception.DivideByZeroException;
 import exception.InvalidOperationException;
+import exception.NotDeclaredVariable;
 
 public class ArithmeticExpression implements Expression {
     private char operator;
@@ -14,9 +16,11 @@ public class ArithmeticExpression implements Expression {
     }
 
     @Override
-    public int eval(MyDictionary<String, Integer> symbolTable) {
-        int left = this.left.eval(symbolTable);
-        int right = this.right.eval(symbolTable);
+
+    public int eval(MyDictionary<String, Integer> symbolTable, Heap<Integer> heap)
+    {
+        int left = this.left.eval(symbolTable, heap);
+        int right = this.right.eval(symbolTable, heap);
         switch(operator){
             case '+':
                 return left+right;

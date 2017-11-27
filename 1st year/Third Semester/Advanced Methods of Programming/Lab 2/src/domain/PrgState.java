@@ -9,13 +9,15 @@ public class PrgState {
     private MyList<Integer> _messages;
     private IStatement _stmt;
     private FileTable<Integer,  FileData> fileTable;
+    private Heap<Integer> heap;
 
-    public PrgState(MyStack<IStatement> exeStack, MyDictionary<String, Integer> symTable, MyList<Integer> list, IStatement stmt, FileTable<Integer,  FileData> fileTable) {
+    public PrgState(MyStack<IStatement> exeStack, MyDictionary<String, Integer> symTable, MyList<Integer> list, IStatement stmt, FileTable<Integer,  FileData> fileTable, Heap<Integer> heap) {
         this._exeStack = exeStack;
         this._symbolTable = symTable;
         this._messages = list;
         this._stmt = stmt;
         this.fileTable = fileTable;
+        this.heap = heap;
     }
 
     public PrgState(IStatement prg) {
@@ -23,6 +25,7 @@ public class PrgState {
         this._symbolTable = new MyDictionary<>();
         this._messages = new MyList<>();
         this.fileTable = new FileTable<>();
+        this.heap = new Heap<>();
         this._exeStack.push(prg);
     }
 
@@ -60,7 +63,6 @@ public class PrgState {
         this.fileTable = fileTable;
     }
 
-
     public void set_symbolTable(MyDictionary<String, Integer> _symbolTable) {
         this._symbolTable = _symbolTable;
     }
@@ -77,6 +79,14 @@ public class PrgState {
         this._stmt = _stmt;
     }
 
+    public Heap<Integer> getHeap() {
+        return heap;
+    }
+
+    public void setHeap(Heap<Integer> heap) {
+        this.heap = heap;
+    }
+
     @Override
     public String toString() {
         StringBuffer buff = new StringBuffer();
@@ -89,6 +99,8 @@ public class PrgState {
         buff.append(_messages);
         buff.append("\nStatement\n");
         buff.append(_stmt);
+        buff.append("\nHeap\n");
+        buff.append(heap.toString());
         buff.append("\n---------------\n");
 
         return buff.toString();

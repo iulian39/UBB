@@ -21,7 +21,7 @@ public class IfStatement implements IStatement {
 
     @Override
     public PrgState execute(PrgState state) {
-        if(exp.eval(state.get_symbolTable()) == 0)
+        if(exp.eval(state.get_symbolTable(), state.getHeap()) == 0)
             state.get_exeStack().push(elseS);
         else
             state.get_exeStack().push(thenS);

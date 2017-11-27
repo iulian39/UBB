@@ -3,6 +3,7 @@ package domain.Statements;
 
 import domain.FileData;
 
+import domain.IdGenerator;
 import domain.PrgState;
 import exception.FileAlreadyOpenedException;
 
@@ -15,7 +16,6 @@ import java.util.Objects;
 
 public class OpenFileStatement implements IStatement {
     private String id, fileName;
-    private static int internalFdCounter = 2;
 
     public OpenFileStatement(String id, String fileName) {
         this.id = id;
@@ -32,7 +32,7 @@ public class OpenFileStatement implements IStatement {
         if(!f.exists())
             throw new FileNotFoundException("FileNotFoundException at: " + this.toString() + "\n" + "The file " + this.fileName + " does not exist");
 
-        int actFd = ++internalFdCounter;
+        int actFd = IdGenerator.generateId();
         p.getFileTable().add(actFd, new FileData(this.fileName, new BufferedReader(new FileReader(this.fileName))));
         p.get_symbolTable().put(this.id, actFd);
         return p;

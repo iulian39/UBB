@@ -1,5 +1,6 @@
 package domain.Expressions;
 
+import domain.Heap;
 import domain.MyDictionary;
 import exception.NotExistingException;
 
@@ -10,7 +11,7 @@ public class VarExpression implements Expression {
     }
 
     @Override
-    public int eval(MyDictionary< String, Integer > symbolTable){
+    public int eval(MyDictionary< String, Integer > symbolTable, Heap<Integer> heap){
         if(symbolTable.containsKey(varName))
             return symbolTable.get(varName);
         throw new NotExistingException("Not Found");

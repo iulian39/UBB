@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/l1___udp.dir/main.c.o  -o l1___udp 

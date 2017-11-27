@@ -36,6 +36,10 @@ public class Repo implements IRepo {
         printWriter.println(this._prgStateList.get_symbolTable().toString());
         printWriter.println("Message:");
         printWriter.println(this._prgStateList.get_messages().toString());
+        printWriter.println("Heap:");
+        printWriter.println(this._prgStateList.getHeap().toString());
+        printWriter.println("FileTable:");
+        printWriter.println(this._prgStateList.getFileTable().toString());
         printWriter.println();
 
         printWriter.close();

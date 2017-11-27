@@ -1,6 +1,7 @@
 package domain.Expressions;
 
 
+import domain.Heap;
 import domain.MyDictionary;
 
 public class ConstExpression implements Expression {
@@ -9,7 +10,7 @@ public class ConstExpression implements Expression {
         constant = value;
     }
     @Override
-    public int eval(MyDictionary<String, Integer> symbolTable) {
+    public int eval(MyDictionary<String, Integer> symbolTable, Heap<Integer> heap) {
         return constant;
     }
     @Override

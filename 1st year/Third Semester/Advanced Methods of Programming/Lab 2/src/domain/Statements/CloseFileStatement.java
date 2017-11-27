@@ -23,7 +23,7 @@ public class CloseFileStatement implements IStatement{
 
     @Override
     public PrgState execute(PrgState state) throws FileNotOpenException, IOException {
-        int fd = this.expression.eval(state.get_symbolTable());
+        int fd = this.expression.eval(state.get_symbolTable(), state.getHeap());
         FileData file = state.getFileData(fd);
         state.getFileTable().remove(fd);
         if(file == null)
