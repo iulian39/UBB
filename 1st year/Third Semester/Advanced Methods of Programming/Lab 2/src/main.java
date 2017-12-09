@@ -10,8 +10,7 @@ import java.util.Scanner;
 public class main {
     public main(){}
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) throws InterruptedException {
         // a=2+3*5;b=a+1;
         // Print(b)
         IStatement ex1 = new CompoundStatement(new AssignStatement("a", new ArithmeticExpression('+',new ConstExpression(2),new
@@ -123,6 +122,31 @@ public class main {
                                 new AssignStatement("v", new ArithmeticExpression('+', new VarExpression("v"), new ConstExpression(1)))
                         ))
         );
+
+        IStatement lab8ex1 = new CompoundStatement(
+                new CompoundStatement(
+                        new AssignStatement("v", new ConstExpression(10)),
+                        new newH("a", new ConstExpression(22))
+                ),
+                new CompoundStatement(
+                        new forkStmt(
+                                new CompoundStatement(
+                                        new writeH("a", new ConstExpression(30)),
+                                        new CompoundStatement(
+                                                new AssignStatement("v", new ConstExpression(32)),
+                                                new CompoundStatement(
+                                                        new PrintStatement(new VarExpression("v")),
+                                                        new PrintStatement(new readH("a"))
+                                                )
+                                        )
+                                )
+                        ),
+                        new CompoundStatement(
+                                new PrintStatement(new VarExpression("v")),
+                                new PrintStatement(new readH("a"))
+                        )
+                )
+        );
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "Exit"));
         menu.addCommand(new RunExample("1", ex1.toString(), new Controller(ex1, File)));
@@ -132,6 +156,7 @@ public class main {
         menu.addCommand(new RunExample("5", lab4ex2.toString(), new Controller(lab4ex2, File)));
         menu.addCommand(new RunExample("6", lab5ex1.toString(), new Controller(lab5ex1, File)));
         menu.addCommand(new RunExample("7", lab7.toString(), new Controller(lab7, File)));
+        menu.addCommand(new RunExample("8", lab8ex1.toString(), new Controller(lab8ex1, File)));
         menu.show();
 
 

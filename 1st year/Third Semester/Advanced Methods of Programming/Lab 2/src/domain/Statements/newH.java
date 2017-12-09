@@ -36,7 +36,7 @@ public class newH implements IStatement{
             sym.put(nrx, addr);
         }
 
-        return p;
+        return null;
     }
 
     @Override

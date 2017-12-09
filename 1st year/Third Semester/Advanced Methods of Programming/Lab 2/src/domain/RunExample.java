@@ -16,12 +16,13 @@ public class RunExample extends Command {
         this.ctr=ctr;
     }
     @Override
-    public void execute() {
+    public void execute() throws InterruptedException {
         try {
-            ctr.executeAll();
+            ctr.allStep();
         }
         catch (NotDeclaredVariable | DivideByZeroException | FileAlreadyOpenedException | FileNotOpenException | IOException e) {
                         System.out.println(e.getMessage());
-                    }
+
+        }
     }
 }

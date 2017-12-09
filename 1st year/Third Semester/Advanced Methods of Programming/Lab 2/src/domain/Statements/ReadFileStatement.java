@@ -30,7 +30,7 @@ public class ReadFileStatement implements IStatement {
         if(line != null)
             val = Integer.valueOf(line);
         state.get_symbolTable().put(this.var, val);
-        return state;
+        return null;
     }
 
     @Override

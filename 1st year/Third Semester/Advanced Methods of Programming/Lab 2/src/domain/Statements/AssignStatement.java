@@ -17,7 +17,7 @@ public class AssignStatement implements IStatement {
     public PrgState execute(PrgState state) {
         MyDictionary<String, Integer> symTable = state.get_symbolTable();
         symTable.put(this.varName, this.expr.eval(symTable, state.getHeap()));
-        return state;
+        return null;
     }
 
     @Override

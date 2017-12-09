@@ -35,7 +35,7 @@ public class OpenFileStatement implements IStatement {
         int actFd = IdGenerator.generateId();
         p.getFileTable().add(actFd, new FileData(this.fileName, new BufferedReader(new FileReader(this.fileName))));
         p.get_symbolTable().put(this.id, actFd);
-        return p;
+        return null;
     }
     @Override
     public String toString() {

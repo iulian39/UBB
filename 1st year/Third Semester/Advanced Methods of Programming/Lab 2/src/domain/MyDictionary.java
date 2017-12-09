@@ -65,4 +65,12 @@ public class MyDictionary<Key, Value>
         return this._dictinary;
     }
 
+    @Override
+    public MyDictionary<Key, Value> clone() {
+        MyDictionary<Key, Value> dict = new MyDictionary<>(new HashMap<Key, Value>());
+        for(Key key : _dictinary.keySet())
+            dict.put(key, _dictinary.get(key));
+        return dict;
+    }
+
 }

@@ -31,7 +31,7 @@ public class CloseFileStatement implements IStatement{
             throw new FileNotOpenException("FileNotOpened Exception at: " + this.toString() + "\nThere is no opened file with file descriptor = " + fd);
         }
         file.getFileDescriptor().close();
-        return state;
+        return null;
 
     }
 }

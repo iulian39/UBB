@@ -28,7 +28,7 @@ public class writeH implements IStatement {
             throw new InterpreterException("The variable doesn't exist in the symbolTable");
 
         heap.update(v, expRes);
-        return p;
+        return null;
     }
 
     @Override

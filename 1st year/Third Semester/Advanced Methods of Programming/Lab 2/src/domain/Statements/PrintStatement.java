@@ -23,7 +23,7 @@ public class PrintStatement implements IStatement {
 
         int r = exp.eval(prg.get_symbolTable(), prg.getHeap());
         prg.get_messages().add(r);
-        return prg;
+        return null;
 
 //        MyDictionary<String, Integer> dict = prg.get_symbolTable();
 //        List<Integer> list = prg.get_messages();

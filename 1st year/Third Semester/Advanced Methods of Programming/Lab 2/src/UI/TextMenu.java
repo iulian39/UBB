@@ -18,7 +18,7 @@ public class TextMenu {
             System.out.println(line);
         }
     }
-    public void show(){
+    public void show() throws InterruptedException {
         Scanner scanner=new Scanner(System.in);
         while(true){
             printMenu();

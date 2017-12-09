@@ -30,5 +30,12 @@ public class FileData{
         this.fileDescriptor = fileDescriptor;
     }
 
+    public String toString() {
+        StringBuffer buff = new StringBuffer();
+        buff.append(fileName);
+        buff.append(" ");
+        buff.append(fileDescriptor);
+        return buff.toString();
 
+    }
 }

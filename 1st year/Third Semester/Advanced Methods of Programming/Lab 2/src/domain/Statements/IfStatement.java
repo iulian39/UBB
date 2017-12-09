@@ -25,6 +25,6 @@ public class IfStatement implements IStatement {
             state.get_exeStack().push(elseS);
         else
             state.get_exeStack().push(thenS);
-        return state;
+        return null;
     }
 }

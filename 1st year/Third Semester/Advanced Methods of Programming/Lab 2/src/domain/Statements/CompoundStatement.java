@@ -21,6 +21,6 @@ public class CompoundStatement implements IStatement {
         MyStack<IStatement> stack = state.get_exeStack();
         stack.push(second);
         stack.push(first);
-        return state;
+        return null;
     }
 }
