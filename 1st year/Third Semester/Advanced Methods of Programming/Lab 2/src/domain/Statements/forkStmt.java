@@ -1,5 +1,6 @@
 package domain.Statements;
 
+import domain.IdGenerator;
 import domain.MyDictionary;
 import domain.MyStack;
 import domain.PrgState;
@@ -16,7 +17,7 @@ public class forkStmt implements IStatement {
         public PrgState execute(PrgState state) {
             MyStack<IStatement> s = new MyStack<>();
             s.push(stmt);
-            PrgState forkProgram = new PrgState(s, state.get_symbolTable().clone(), state.get_messages(), this.stmt, state.getFileTable(), state.getHeap(), state.getId() * 10);
+            PrgState forkProgram = new PrgState(s, state.get_symbolTable().clone(), state.get_messages(), this.stmt, state.getFileTable(), state.getHeap(), state.getId() * 10 + IdGenerator.generateId());
             return forkProgram;
         }
 

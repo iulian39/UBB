@@ -21,6 +21,12 @@ public class Repo implements IRepo {
         this.logFile = logFile;
     }
 
+    public Repo(PrgState state)
+    {
+        this._prgStateList = new ArrayList<>();
+        this._prgStateList.add(state);
+    }
+
     public void setPrgList(List<PrgState> _prgStateList) {
         this._prgStateList = _prgStateList;
     }

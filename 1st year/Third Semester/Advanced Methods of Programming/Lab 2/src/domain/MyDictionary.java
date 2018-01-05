@@ -18,6 +18,12 @@ public class MyDictionary<Key, Value>
         this._dictinary = dictionary;
     }
 
+    public MyDictionary(Key k, Value v)
+    {
+        this._dictinary = new HashMap<>();
+        this._dictinary.put(k,v);
+    }
+
     public void put(Key key, Value value)
     {
         _dictinary.put(key, value);

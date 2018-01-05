@@ -77,4 +77,9 @@ public class Heap<T> {
     public Map<Integer, T> toMap() {
         return this.vals;
     }
+
+    public Integer size()
+    {
+        return this.vals.size();
+    }
 }

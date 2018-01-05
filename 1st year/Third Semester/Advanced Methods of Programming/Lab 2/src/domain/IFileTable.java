@@ -10,4 +10,5 @@ public interface IFileTable<K,V>
     void add(K key, V value);
     Iterable<K> getAll();
     public Collection<V> values();
+    public Collection<K> keys();
 }

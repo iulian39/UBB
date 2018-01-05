@@ -9,6 +9,12 @@ import exception.DivideByZeroException;
 import exception.FileAlreadyOpenedException;
 import exception.FileNotOpenException;
 import exception.NotDeclaredVariable;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -35,6 +41,15 @@ public class Controller {
         this.File = File;
     }
 
+    public Controller(IStatement initialStatement) {
+        this.repo = new Repo(new PrgState(initialStatement));
+    }
+
+    public void setRepo(Repo r)
+    {
+        this.repo = r;
+    }
+
 
 
     public Map<Integer, Integer> conservativeGarbageCollector(Collection<Integer> symTableValues, Map<Integer, Integer> heap) {
@@ -55,10 +70,7 @@ public class Controller {
     }
 
     void oneStepForAllPrg(List<PrgState> prgList) throws IOException, InterruptedException {
-//        //before the execution, print the PrgState List into the log file
-//        for (PrgState prg : prgList) {
-//            repo.logPrgStateExec(prg);
-//        }
+
 
         List<Callable<PrgState>> callList = prgList.stream()
                 .map((PrgState p) -> (Callable<PrgState>)(() -> {return p.oneStep();}))
@@ -101,22 +113,11 @@ public class Controller {
         }
         executor.shutdownNow();
         repo.setPrgList(prgList);
-        //HERE the repository still contains at least one Completed Prg
-        // and its List<PrgState> is not empty. Note that oneStepForAllPrg calls the method
-        //setPrgList of repository in order to change the repository
-//        for(PrgState x: repo.getPrgList()) {
-//            for (int y : x.getFileTable().getAll()) {
-//                try {
-//                    x.getFileTable().get(y).getFileDescriptor().close();
-//                } catch ( IOException e1 ) {
-//                    e1.printStackTrace();
-//                }
-//                x.getFileTable().remove(y);
-//            }
-//        }
-//        // update the repository state
+
 
     }
+
+
 
 
 //    public void executeAll()  throws NotDeclaredVariable, DivideByZeroException, FileAlreadyOpenedException, FileNotOpenException, IOException

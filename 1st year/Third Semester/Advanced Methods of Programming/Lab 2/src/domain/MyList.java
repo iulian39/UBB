@@ -26,4 +26,13 @@ public class MyList<T> {
         }
         return buff.toString();
     }
+
+    public int size()
+    {
+        return l.size();
+    }
+
+    public T get(int i) {
+        return l.get(i);
+    }
 }

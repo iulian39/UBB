@@ -52,6 +52,11 @@ public class FileTable<K,V> implements IFileTable<K,V>
     }
 
     @Override
+    public Collection<K> keys() {
+        return this.fileTable.keySet();
+    }
+
+    @Override
     public String toString() {
         StringBuffer buff = new StringBuffer();
         for( K i : fileTable.keySet())

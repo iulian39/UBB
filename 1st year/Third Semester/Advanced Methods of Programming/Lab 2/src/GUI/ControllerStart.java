@@ -1,15 +1,37 @@
-import domain.Expressions.*;
-import domain.Statements.*;
+package GUI;
 
+import Repository.Repo;
+import domain.Expressions.*;
+import Controller.Controller;
+import domain.Observer;
+import domain.PrgState;
+import domain.PrgStateService;
+import domain.Statements.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.ListView;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-public class main {
+public class ControllerStart {
 
-    public static void main(String[] args) throws Exception {
-        // a=2+3*5;b=a+1;
-        // Print(b)
+    private List<IStatement> menu;
+    private String File;
+
+    @FXML
+    private ListView<String> listV;
+
+    @FXML
+    void initialize() {
+        menu = new ArrayList<>();
         IStatement ex1 = new CompoundStatement(new AssignStatement("a", new ArithmeticExpression('+',new ConstExpression(2),new
                 ArithmeticExpression('*',new ConstExpression(3), new ConstExpression(5)))),
                 new CompoundStatement(new AssignStatement("b",new ArithmeticExpression('+',new VarExpression("a"), new
@@ -24,14 +46,6 @@ public class main {
                         AssignStatement("v", new ConstExpression(3))), new PrintStatement(new VarExpression("v"))));
 
 
-
-        System.out.printf("Input the file where the log will be registered: ");
-        Scanner terminalInput = new Scanner(System.in);
-        String File = terminalInput.nextLine();
-
-        System.out.printf("Input the file where the variable will be read from: ");
-        String ReadFile = terminalInput.nextLine();
-
         /*
         *   openRFile (var_f, "test.in");
         *   readFile (var_f, var_c); print (var_c);
@@ -39,7 +53,7 @@ public class main {
         *   closeRFile (var_f)
         */
         IStatement lab4ex1 = new CompoundStatement(
-                new OpenFileStatement("var_f", ReadFile),
+                new OpenFileStatement("var_f", "a.txt"),
                 new CompoundStatement(
                         new ReadFileStatement(new VarExpression("var_f"), "var_c"),
                         new CompoundStatement(
@@ -151,19 +165,40 @@ public class main {
                 )
         );
 
-        List<String> menu = new ArrayList<>();
-        menu.add(ex1.toString());
-        menu.add(ex2.toString());
-        menu.add(ex3.toString());
+        ObservableList<String> listItems = FXCollections.observableArrayList();
 
+        menu.add(ex1);
+        menu.add(ex2);
+        menu.add(ex3);
+        menu.add(lab4ex1);
+        menu.add(lab4ex2);
+        menu.add(lab5ex1);
+        menu.add(lab7);
+        menu.add(lab8ex1);
 
+        for(IStatement stmt : menu)
+        {
+            listItems.add(stmt.toString());
+        }
 
-
-
-
-
+        listV.setItems(listItems);
     }
 
+    public void loadMainWindow() throws IOException {
+        ObservableList<Integer> i = listV.getSelectionModel().getSelectedIndices();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui.fxml"));
+        Parent root1 = fxmlLoader.load();
+        ControllerMain controller = fxmlLoader.getController();
+        controller.setController(new Controller(menu.get(i.get(0))));
 
+        PrgStateService service = new PrgStateService(new Repo(new PrgState(menu.get(i.get(0)))));
+        controller.setService(service);
+        service.addObserver((Observer) controller);
+
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
 
 }

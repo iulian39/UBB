@@ -2,6 +2,7 @@ package domain;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Stack;
 
 public class MyStack<T> {
     private Deque<T> _stack;
@@ -36,6 +37,10 @@ public class MyStack<T> {
             buff.append(" ");
         }
         return buff.toString();
+    }
+
+    public Deque<T> toStack() {
+        return this._stack;
     }
 
     public Iterable<T> getAll()

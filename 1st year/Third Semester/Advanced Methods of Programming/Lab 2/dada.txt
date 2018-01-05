@@ -1,0 +1,247 @@
+Id:
+8
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+8
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+8
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+8
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a9v10
+Message:
+
+Heap:
+9 -> 22
+FileTable:
+
+
+Id:
+8
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a9v10
+Message:
+
+Heap:
+9 -> 22
+FileTable:
+
+
+Id:
+8
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a9v10
+Message:
+
+Heap:
+9 -> 22
+FileTable:
+
+
+Id:
+90
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a9v10
+Message:
+
+Heap:
+9 -> 22
+FileTable:
+
+
+Id:
+8
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a9v10
+Message:
+
+Heap:
+9 -> 22
+FileTable:
+
+
+Id:
+90
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a9v10
+Message:
+
+Heap:
+9 -> 22
+FileTable:
+
+
+Id:
+8
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a9v10
+Message:
+10 
+Heap:
+9 -> 30
+FileTable:
+
+
+Id:
+90
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a9v10
+Message:
+10 
+Heap:
+9 -> 30
+FileTable:
+
+
+Id:
+8
+ExeStack:
+
+SymTable:
+a9v10
+Message:
+10 30 
+Heap:
+9 -> 30
+FileTable:
+
+
+Id:
+90
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a9v10
+Message:
+10 30 
+Heap:
+9 -> 30
+FileTable:
+
+
+Id:
+90
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a9v32
+Message:
+10 30 
+Heap:
+9 -> 30
+FileTable:
+
+
+Id:
+90
+ExeStack:
+
+SymTable:
+a9v32
+Message:
+10 30 
+Heap:
+9 -> 30
+FileTable:
+
+
+Id:
+911
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a9v32
+Message:
+10 30 
+Heap:
+9 -> 30
+FileTable:
+
+
+Id:
+911
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a9v32
+Message:
+10 30 
+Heap:
+9 -> 30
+FileTable:
+
+
+Id:
+911
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a9v32
+Message:
+10 30 32 
+Heap:
+9 -> 30
+FileTable:
+
+
+Id:
+911
+ExeStack:
+
+SymTable:
+a9v32
+Message:
+10 30 32 30 
+Heap:
+9 -> 30
+FileTable:
+
+
