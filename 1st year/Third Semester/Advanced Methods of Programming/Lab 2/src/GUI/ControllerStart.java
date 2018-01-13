@@ -1,11 +1,9 @@
 package GUI;
 
 import Repository.Repo;
+import domain.*;
 import domain.Expressions.*;
 import Controller.Controller;
-import domain.Observer;
-import domain.PrgState;
-import domain.PrgStateService;
 import domain.Statements.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -28,6 +26,20 @@ public class ControllerStart {
 
     @FXML
     private ListView<String> listV;
+
+    public static Repo getNewRepository(IStatement prg) {
+        /// Create the data structures for the program execution
+        MyDictionary<String, Integer> _symbolTable = new MyDictionary<>();
+        MyStack<IStatement> _exeStack = new MyStack<>();
+        MyList<Integer> _messages =new MyList<>();
+        FileTable<Integer,  FileData> fileTable= new FileTable<>();
+        Heap<Integer> heap = new Heap<>();
+        int id = IdGenerator.generateId();
+
+        PrgState prgState = new PrgState(_exeStack, _symbolTable,_messages,prg,fileTable,heap,id);
+        Repo repo = new Repo(prgState, "log.txt");
+        return repo;
+    }
 
     @FXML
     void initialize() {
@@ -185,15 +197,15 @@ public class ControllerStart {
     }
 
     public void loadMainWindow() throws IOException {
-        ObservableList<Integer> i = listV.getSelectionModel().getSelectedIndices();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui.fxml"));
         Parent root1 = fxmlLoader.load();
-        ControllerMain controller = fxmlLoader.getController();
-        controller.setController(new Controller(menu.get(i.get(0))));
 
-        PrgStateService service = new PrgStateService(new Repo(new PrgState(menu.get(i.get(0)))));
-        controller.setService(service);
-        service.addObserver((Observer) controller);
+        PrgStateService prgStateService = new PrgStateService(getNewRepository(menu.get(listV.getSelectionModel().getSelectedIndex())));
+        Controller ctrl = fxmlLoader.getController();
+        ctrl.setService(prgStateService);
+        prgStateService.addObserver(ctrl);
+
+
 
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);

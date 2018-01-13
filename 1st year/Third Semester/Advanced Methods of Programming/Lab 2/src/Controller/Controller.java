@@ -3,34 +3,66 @@ package Controller;
 import Repository.Repo;
 import domain.*;
 import domain.Expressions.Expression;
+import domain.Observable;
+import domain.Observer;
 import domain.Statements.CloseFileStatement;
 import domain.Statements.IStatement;
 import exception.DivideByZeroException;
 import exception.FileAlreadyOpenedException;
 import exception.FileNotOpenException;
 import exception.NotDeclaredVariable;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.util.Callback;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
-public class Controller {
+public class Controller implements Observer<PrgState> {
     private Repo repo;
     private String File;
     private ExecutorService executor;
+    private PrgStateService prgStateService;
+    private ObservableList<PrgState> prgStateModel;
+    private ObservableList<String> outListModel;
+    private ObservableList<Map.Entry<Integer, Integer>> heapTableModel;
+    private ObservableList<MyDictionary<Integer, String>> fileTableModel;
+    private ObservableList<IStatement> exeStackModel;
+    private ObservableList<MyDictionary<String, Integer>> symTableModel;
+    private int programId;
+
+    @FXML
+    private TableView<MyDictionary<Integer, String>> FileTableTV;
+
+    @FXML
+    private ListView<IStatement> ExeStackLV;
+
+    @FXML
+    private TableView<MyDictionary<String, Integer>> SymbolTV;
+
+    @FXML
+    private ListView<PrgState> PrgStatesIdentifiersLV;
+
+    @FXML
+    private ListView<String> OutLV;
+    @FXML
+    private Button btnRun;
+    @FXML
+    private TextField PrgStatesTF;
+
+    @FXML
+    private TableView<Map.Entry<Integer, Integer>> HeapTable;
+
 
     public Controller(Repo r) {
         this.repo = r;
@@ -43,6 +75,78 @@ public class Controller {
 
     public Controller(IStatement initialStatement) {
         this.repo = new Repo(new PrgState(initialStatement));
+    }
+    public Controller() {
+    }
+
+    @FXML
+    private void initialize() {
+    }
+
+    public void setService(PrgStateService service) {
+
+        this.prgStateService = service;
+
+        System.out.println(service.getRepo().getPrgList().get(0).get_stmt());
+
+        this.programId = this.prgStateService.getAll().get(0).getId();
+
+        this.repo = this.prgStateService.getRepo();
+        //prg state model;
+        this.prgStateModel = FXCollections.observableArrayList();
+        this.PrgStatesIdentifiersLV.setItems(this.prgStateModel);
+        this.PrgStatesIdentifiersLV.setCellFactory(new Callback<ListView<PrgState>, ListCell<PrgState>>() {
+            @Override
+            public ListCell<PrgState> call(ListView<PrgState> param) {
+                ListCell<PrgState> listCell = new ListCell<PrgState>() {
+                    @Override
+                    protected void updateItem(PrgState e, boolean empty) {
+                        super.updateItem(e, empty);
+                        if (e == null || empty)
+                            setText("");
+                        else
+                            setText(String.valueOf(e.getId()));
+                    }
+                };
+                return listCell;
+            }
+        });
+
+        this.heapTableModel = FXCollections.observableArrayList();
+        this.HeapTable.setItems(this.heapTableModel);
+
+        this.fileTableModel = FXCollections.observableArrayList();
+        this.FileTableTV.setItems(this.fileTableModel);
+
+        this.symTableModel = FXCollections.observableArrayList();
+        this.SymbolTV.setItems(this.symTableModel);
+
+        this.outListModel = FXCollections.observableArrayList();
+        this.OutLV.setItems(this.outListModel);
+
+        this.exeStackModel = FXCollections.observableArrayList();
+        this.ExeStackLV.setItems(this.exeStackModel);
+
+
+        this.PrgStatesIdentifiersLV.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<PrgState>() {
+            @Override
+            public void changed(ObservableValue<? extends PrgState> observable, PrgState oldValue, PrgState newValue) {
+                programId = newValue.getId();
+                List<PrgState> prgStates = prgStateService.getAll();
+                PrgState current = prgStates.stream().filter(e -> e.getId() == programId).findFirst().get();
+
+                List<IStatement> list = new ArrayList<>();
+                for(IStatement stm: current.get_exeStack().getAll())
+                    list.add(stm);
+                Collections.reverse(list);
+                exeStackModel.setAll(list);
+                //symTableModel.setAll(current.get_symbolTable().clone().getAll().entrySet().stream().map(e->new MyDictionary<String, Integer>(e.getKey(), e.getValue())).collect(Collectors.toCollection((Collectors.toList()))));
+            }
+        });
+
+
+
+        this.update(this.prgStateService);
     }
 
     public void setRepo(Repo r)
@@ -113,8 +217,45 @@ public class Controller {
         }
         executor.shutdownNow();
         repo.setPrgList(prgList);
+    }
 
+    @FXML
+    public void allStepsGUI() throws IOException, InterruptedException {
+        executor = Executors.newFixedThreadPool(2);
+        while(true) {
+            this.prgStateService.notifyObservers();
+            List<PrgState> prgList = removeCompletedPrg(this.prgStateService.getAll());
+            if(prgList.size() == 0) {
+                System.out.println("FINISHED");
+                break;
+            }
+            oneStepForAllPrg(prgList);
+            System.out.println("ONE STEP");
+            break;
+        }
+        executor.shutdownNow();
+    }
 
+    @Override
+    public void update(Observable<PrgState> observable) {
+        List<PrgState> prgStates = this.prgStateService.getAll();
+        this.PrgStatesTF.setText(String.valueOf(prgStates.size()));
+        this.prgStateModel.setAll(prgStates);
+        this.outListModel.setAll(this.prgStateService.getOutList());
+        this.heapTableModel.setAll(this.prgStateService.getHeapList());
+
+        this.fileTableModel.setAll( prgStates.get(0).getFileTable().keys()
+                .stream()
+                .map(k -> new MyDictionary<Integer, String>(k, prgStates.get(0).getFileTable().get(k).getFileName()))
+                .collect(Collectors.toList())
+        );
+
+        PrgState current = prgStates.stream().filter(e->e.getId() == programId).findFirst().get();
+
+        List<IStatement> list = current.get_exeStack().toStack().stream().collect(Collectors.toList());
+        Collections.reverse(list);
+        this.exeStackModel.setAll(list);
+        this.symTableModel.setAll(current.get_symbolTable().clone().getAll().entrySet().stream().map(e->new MyDictionary<String, Integer>(e.getKey(), e.getValue())).collect(Collectors.toList()));
     }
 
 

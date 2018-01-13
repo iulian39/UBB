@@ -38,11 +38,9 @@ public class PrgStateService implements Observable<PrgState> {
         return mList;
     }
 
-    public MyDictionary<Integer, String> getHeapList() {
-        MyDictionary<Integer, String> hList = new MyDictionary<>();
-        for(int i = 0; i < this.repo.getPrgList().get(0).getHeap().size(); ++ i)
-            hList.put(i, this.repo.getPrgList().get(0).getHeap().get(i).toString());
-        return hList;
+    public List<Map.Entry<Integer, Integer>> getHeapList() {
+        return new ArrayList<Map.Entry<Integer, Integer>>(repo.getPrgList().get(0).getHeap().toMap().entrySet());
+
     }
 
     @Override
