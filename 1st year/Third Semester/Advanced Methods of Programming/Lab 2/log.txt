@@ -1,0 +1,9867 @@
+Id:
+1
+ExeStack:
+v=2 Print (v) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) 
+SymTable:
+v2
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+v2
+Message:
+2 
+Heap:
+
+FileTable:
+
+
+Id:
+2
+ExeStack:
+v=0 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+2
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+4
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+4
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+4
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+4
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a5v10
+Message:
+
+Heap:
+5 -> 22
+FileTable:
+
+
+Id:
+4
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a5v10
+Message:
+
+Heap:
+5 -> 22
+FileTable:
+
+
+Id:
+4
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a5v10
+Message:
+
+Heap:
+5 -> 22
+FileTable:
+
+
+Id:
+46
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a5v10
+Message:
+
+Heap:
+5 -> 22
+FileTable:
+
+
+Id:
+4
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a5v10
+Message:
+
+Heap:
+5 -> 22
+FileTable:
+
+
+Id:
+46
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a5v10
+Message:
+
+Heap:
+5 -> 22
+FileTable:
+
+
+Id:
+4
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a5v10
+Message:
+10 
+Heap:
+5 -> 30
+FileTable:
+
+
+Id:
+46
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a5v10
+Message:
+10 
+Heap:
+5 -> 30
+FileTable:
+
+
+Id:
+4
+ExeStack:
+
+SymTable:
+a5v10
+Message:
+10 30 
+Heap:
+5 -> 30
+FileTable:
+
+
+Id:
+46
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a5v10
+Message:
+10 30 
+Heap:
+5 -> 30
+FileTable:
+
+
+Id:
+46
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a5v32
+Message:
+10 30 
+Heap:
+5 -> 30
+FileTable:
+
+
+Id:
+46
+ExeStack:
+
+SymTable:
+a5v32
+Message:
+10 30 
+Heap:
+5 -> 30
+FileTable:
+
+
+Id:
+467
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a5v32
+Message:
+10 30 
+Heap:
+5 -> 30
+FileTable:
+
+
+Id:
+8
+ExeStack:
+openRFile (var_f, a.txt) ( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+8
+ExeStack:
+( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+var_f9
+Message:
+
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+ReadFileStatement (var_f, var_c) ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f9
+Message:
+
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f9var_c15
+Message:
+
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+Print (var_c) ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
+SymTable:
+var_f9var_c15
+Message:
+
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
+SymTable:
+var_f9var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0) CloseFileStatement (var_f) 
+SymTable:
+var_f9var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+( ReadFileStatement (var_f, var_c), Print (var_c) ) CloseFileStatement (var_f) 
+SymTable:
+var_f9var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+ReadFileStatement (var_f, var_c) Print (var_c) CloseFileStatement (var_f) 
+SymTable:
+var_f9var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+Print (var_c) CloseFileStatement (var_f) 
+SymTable:
+var_f9var_c0
+Message:
+15 
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+CloseFileStatement (var_f) 
+SymTable:
+var_f9var_c0
+Message:
+15 0 
+Heap:
+
+FileTable:
+9 a.txt java.io.BufferedReader@7b1813d6
+
+
+Id:
+8
+ExeStack:
+
+SymTable:
+var_f9var_c0
+Message:
+15 0 
+Heap:
+
+FileTable:
+
+
+Id:
+10
+ExeStack:
+v=10 ( newH(v, 20), ( newH(a, 22), ( writeH(a, 30), ( Print (a), ( Print (readH(a)), a=0 ) ) ) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+10
+ExeStack:
+( newH(v, 20), ( newH(a, 22), ( writeH(a, 30), ( Print (a), ( Print (readH(a)), a=0 ) ) ) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+10
+ExeStack:
+newH(v, 20) ( newH(a, 22), ( writeH(a, 30), ( Print (a), ( Print (readH(a)), a=0 ) ) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+10
+ExeStack:
+( newH(a, 22), ( writeH(a, 30), ( Print (a), ( Print (readH(a)), a=0 ) ) ) ) 
+SymTable:
+v11
+Message:
+
+Heap:
+11 -> 20
+FileTable:
+
+
+Id:
+10
+ExeStack:
+newH(a, 22) ( writeH(a, 30), ( Print (a), ( Print (readH(a)), a=0 ) ) ) 
+SymTable:
+v11
+Message:
+
+Heap:
+11 -> 20
+FileTable:
+
+
+Id:
+10
+ExeStack:
+( writeH(a, 30), ( Print (a), ( Print (readH(a)), a=0 ) ) ) 
+SymTable:
+a12v11
+Message:
+
+Heap:
+11 -> 20
+12 -> 22
+FileTable:
+
+
+Id:
+10
+ExeStack:
+writeH(a, 30) ( Print (a), ( Print (readH(a)), a=0 ) ) 
+SymTable:
+a12v11
+Message:
+
+Heap:
+11 -> 20
+12 -> 22
+FileTable:
+
+
+Id:
+10
+ExeStack:
+( Print (a), ( Print (readH(a)), a=0 ) ) 
+SymTable:
+a12v11
+Message:
+
+Heap:
+11 -> 20
+12 -> 30
+FileTable:
+
+
+Id:
+10
+ExeStack:
+Print (a) ( Print (readH(a)), a=0 ) 
+SymTable:
+a12v11
+Message:
+
+Heap:
+11 -> 20
+12 -> 30
+FileTable:
+
+
+Id:
+10
+ExeStack:
+( Print (readH(a)), a=0 ) 
+SymTable:
+a12v11
+Message:
+12 
+Heap:
+11 -> 20
+12 -> 30
+FileTable:
+
+
+Id:
+10
+ExeStack:
+Print (readH(a)) a=0 
+SymTable:
+a12v11
+Message:
+12 
+Heap:
+11 -> 20
+12 -> 30
+FileTable:
+
+
+Id:
+10
+ExeStack:
+a=0 
+SymTable:
+a12v11
+Message:
+12 30 
+Heap:
+11 -> 20
+12 -> 30
+FileTable:
+
+
+Id:
+10
+ExeStack:
+
+SymTable:
+a0v11
+Message:
+12 30 
+Heap:
+11 -> 20
+12 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+57
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+57
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a6v10
+Message:
+10 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a6v10
+Message:
+10 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+
+SymTable:
+a6v10
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a6v10
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a6v32
+Message:
+10 30 32 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+
+SymTable:
+a6v32
+Message:
+10 30 32 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=0 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 10 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v11
+Message:
+0 1 2 3 4 5 6 7 8 9 10 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+
+SymTable:
+v11
+Message:
+0 1 2 3 4 5 6 7 8 9 10 
+Heap:
+
+FileTable:
+
+
+Id:
+6
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+6
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+6
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+6
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a7v10
+Message:
+
+Heap:
+7 -> 22
+FileTable:
+
+
+Id:
+6
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a7v10
+Message:
+
+Heap:
+7 -> 22
+FileTable:
+
+
+Id:
+6
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a7v10
+Message:
+
+Heap:
+7 -> 22
+FileTable:
+
+
+Id:
+68
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a7v10
+Message:
+
+Heap:
+7 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+57
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+57
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a6v10
+Message:
+10 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a6v10
+Message:
+10 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+
+SymTable:
+a6v10
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a6v10
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=0 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 10 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v11
+Message:
+0 1 2 3 4 5 6 7 8 9 10 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+
+SymTable:
+v11
+Message:
+0 1 2 3 4 5 6 7 8 9 10 
+Heap:
+
+FileTable:
+
+
+Id:
+6
+ExeStack:
+openRFile (var_f, a.txt) ( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+6
+ExeStack:
+( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+var_f7
+Message:
+
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+ReadFileStatement (var_f, var_c) ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f7
+Message:
+
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f7var_c15
+Message:
+
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+Print (var_c) ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
+SymTable:
+var_f7var_c15
+Message:
+
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
+SymTable:
+var_f7var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0) CloseFileStatement (var_f) 
+SymTable:
+var_f7var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+( ReadFileStatement (var_f, var_c), Print (var_c) ) CloseFileStatement (var_f) 
+SymTable:
+var_f7var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+ReadFileStatement (var_f, var_c) Print (var_c) CloseFileStatement (var_f) 
+SymTable:
+var_f7var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+Print (var_c) CloseFileStatement (var_f) 
+SymTable:
+var_f7var_c0
+Message:
+15 
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+CloseFileStatement (var_f) 
+SymTable:
+var_f7var_c0
+Message:
+15 0 
+Heap:
+
+FileTable:
+7 a.txt java.io.BufferedReader@7730d162
+
+
+Id:
+6
+ExeStack:
+
+SymTable:
+var_f7var_c0
+Message:
+15 0 
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+57
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+57
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a6v10
+Message:
+10 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a6v10
+Message:
+10 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+
+SymTable:
+a6v10
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a6v10
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a6v32
+Message:
+10 30 32 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+
+SymTable:
+a6v32
+Message:
+10 30 32 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+2
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+2
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+2
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+2
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a3v10
+Message:
+
+Heap:
+3 -> 22
+FileTable:
+
+
+Id:
+2
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a3v10
+Message:
+
+Heap:
+3 -> 22
+FileTable:
+
+
+Id:
+2
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a3v10
+Message:
+
+Heap:
+3 -> 22
+FileTable:
+
+
+Id:
+24
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a3v10
+Message:
+
+Heap:
+3 -> 22
+FileTable:
+
+
+Id:
+2
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a3v10
+Message:
+
+Heap:
+3 -> 22
+FileTable:
+
+
+Id:
+24
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a3v10
+Message:
+
+Heap:
+3 -> 22
+FileTable:
+
+
+Id:
+2
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a3v10
+Message:
+10 
+Heap:
+3 -> 30
+FileTable:
+
+
+Id:
+24
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a3v10
+Message:
+10 
+Heap:
+3 -> 30
+FileTable:
+
+
+Id:
+2
+ExeStack:
+
+SymTable:
+a3v10
+Message:
+10 30 
+Heap:
+3 -> 30
+FileTable:
+
+
+Id:
+24
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a3v10
+Message:
+10 30 
+Heap:
+3 -> 30
+FileTable:
+
+
+Id:
+24
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a3v32
+Message:
+10 30 
+Heap:
+3 -> 30
+FileTable:
+
+
+Id:
+24
+ExeStack:
+
+SymTable:
+a3v32
+Message:
+10 30 
+Heap:
+3 -> 30
+FileTable:
+
+
+Id:
+245
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a3v32
+Message:
+10 30 
+Heap:
+3 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+57
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+8
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+8
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+8
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+8
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a9v10
+Message:
+
+Heap:
+9 -> 22
+FileTable:
+
+
+Id:
+8
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a9v10
+Message:
+
+Heap:
+9 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+57
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+57
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a6v10
+Message:
+
+Heap:
+6 -> 22
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a6v10
+Message:
+10 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a6v10
+Message:
+10 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+
+SymTable:
+a6v10
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a6v10
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+57
+ExeStack:
+
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a6v32
+Message:
+10 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a6v32
+Message:
+10 30 32 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+578
+ExeStack:
+
+SymTable:
+a6v32
+Message:
+10 30 32 30 
+Heap:
+6 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+openRFile (var_f, a.txt) ( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+var_f2
+Message:
+
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+ReadFileStatement (var_f, var_c) ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f2
+Message:
+
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f2var_c15
+Message:
+
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+Print (var_c) ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
+SymTable:
+var_f2var_c15
+Message:
+
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
+SymTable:
+var_f2var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0) CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+( ReadFileStatement (var_f, var_c), Print (var_c) ) CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+ReadFileStatement (var_f, var_c) Print (var_c) CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+Print (var_c) CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c0
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c0
+Message:
+15 0 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@3e38ec97
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+var_f2var_c0
+Message:
+15 0 
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a4v10
+Message:
+
+Heap:
+4 -> 22
+FileTable:
+
+
+Id:
+3
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a4v10
+Message:
+
+Heap:
+4 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+openRFile (var_f, a.txt) ( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+var_f6
+Message:
+
+Heap:
+
+FileTable:
+6 a.txt java.io.BufferedReader@3b1beaf8
+
+
+Id:
+5
+ExeStack:
+ReadFileStatement (var_f, var_c) ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f6
+Message:
+
+Heap:
+
+FileTable:
+6 a.txt java.io.BufferedReader@3b1beaf8
+
+
+Id:
+5
+ExeStack:
+( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f6var_c15
+Message:
+
+Heap:
+
+FileTable:
+6 a.txt java.io.BufferedReader@3b1beaf8
+
+
+Id:
+5
+ExeStack:
+Print (var_c) ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
+SymTable:
+var_f6var_c15
+Message:
+
+Heap:
+
+FileTable:
+6 a.txt java.io.BufferedReader@3b1beaf8
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+13
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+
+Heap:
+2 -> 22
+FileTable:
+
+
+Id:
+1
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a2v10
+Message:
+10 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v10
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+13
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a2v32
+Message:
+10 30 32 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+134
+ExeStack:
+
+SymTable:
+a2v32
+Message:
+10 30 32 30 
+Heap:
+2 -> 30
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=0 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v0
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v1
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v2
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v3
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v4
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v5
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v6
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v7
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v8
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v9
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+( Print (v), v=v + 1 ) while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+Print (v) v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+v=v + 1 while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v10
+Message:
+0 1 2 3 4 5 6 7 8 9 10 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+while(v <= 10) do ( Print (v), v=v + 1 ) end 
+SymTable:
+v11
+Message:
+0 1 2 3 4 5 6 7 8 9 10 
+Heap:
+
+FileTable:
+
+
+Id:
+5
+ExeStack:
+
+SymTable:
+v11
+Message:
+0 1 2 3 4 5 6 7 8 9 10 
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+openRFile (var_f, a.txt) ( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+1
+ExeStack:
+( ReadFileStatement (var_f, var_c), ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) ) 
+SymTable:
+var_f2
+Message:
+
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+ReadFileStatement (var_f, var_c) ( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f2
+Message:
+
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+( Print (var_c), ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) ) 
+SymTable:
+var_f2var_c15
+Message:
+
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+Print (var_c) ( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
+SymTable:
+var_f2var_c15
+Message:
+
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+( If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0), CloseFileStatement (var_f) ) 
+SymTable:
+var_f2var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+If var_c then ( ReadFileStatement (var_f, var_c), Print (var_c) ) else Print (0) CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+( ReadFileStatement (var_f, var_c), Print (var_c) ) CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+ReadFileStatement (var_f, var_c) Print (var_c) CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c15
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+Print (var_c) CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c0
+Message:
+15 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+CloseFileStatement (var_f) 
+SymTable:
+var_f2var_c0
+Message:
+15 0 
+Heap:
+
+FileTable:
+2 a.txt java.io.BufferedReader@68bda402
+
+
+Id:
+1
+ExeStack:
+
+SymTable:
+var_f2var_c0
+Message:
+15 0 
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+( v=10, newH(a, 22) ) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+v=10 newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+newH(a, 22) ( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+v10
+Message:
+
+Heap:
+
+FileTable:
+
+
+Id:
+3
+ExeStack:
+( fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )), ( Print (v), Print (readH(a)) ) ) 
+SymTable:
+a4v10
+Message:
+
+Heap:
+4 -> 22
+FileTable:
+
+
+Id:
+3
+ExeStack:
+fork(( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) )) ( Print (v), Print (readH(a)) ) 
+SymTable:
+a4v10
+Message:
+
+Heap:
+4 -> 22
+FileTable:
+
+
+Id:
+3
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a4v10
+Message:
+
+Heap:
+4 -> 22
+FileTable:
+
+
+Id:
+35
+ExeStack:
+( writeH(a, 30), ( v=32, fork(( Print (v), Print (readH(a)) )) ) ) 
+SymTable:
+a4v10
+Message:
+
+Heap:
+4 -> 22
+FileTable:
+
+
+Id:
+3
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a4v10
+Message:
+
+Heap:
+4 -> 22
+FileTable:
+
+
+Id:
+35
+ExeStack:
+writeH(a, 30) ( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a4v10
+Message:
+
+Heap:
+4 -> 22
+FileTable:
+
+
+Id:
+3
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a4v10
+Message:
+10 
+Heap:
+4 -> 30
+FileTable:
+
+
+Id:
+35
+ExeStack:
+( v=32, fork(( Print (v), Print (readH(a)) )) ) 
+SymTable:
+a4v10
+Message:
+10 
+Heap:
+4 -> 30
+FileTable:
+
+
+Id:
+3
+ExeStack:
+
+SymTable:
+a4v10
+Message:
+10 30 
+Heap:
+4 -> 30
+FileTable:
+
+
+Id:
+35
+ExeStack:
+v=32 fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a4v10
+Message:
+10 30 
+Heap:
+4 -> 30
+FileTable:
+
+
+Id:
+35
+ExeStack:
+fork(( Print (v), Print (readH(a)) )) 
+SymTable:
+a4v32
+Message:
+10 30 
+Heap:
+4 -> 30
+FileTable:
+
+
+Id:
+35
+ExeStack:
+
+SymTable:
+a4v32
+Message:
+10 30 
+Heap:
+4 -> 30
+FileTable:
+
+
+Id:
+356
+ExeStack:
+( Print (v), Print (readH(a)) ) 
+SymTable:
+a4v32
+Message:
+10 30 
+Heap:
+4 -> 30
+FileTable:
+
+
+Id:
+356
+ExeStack:
+Print (v) Print (readH(a)) 
+SymTable:
+a4v32
+Message:
+10 30 
+Heap:
+4 -> 30
+FileTable:
+
+
+Id:
+356
+ExeStack:
+Print (readH(a)) 
+SymTable:
+a4v32
+Message:
+10 30 32 
+Heap:
+4 -> 30
+FileTable:
+
+
+Id:
+356
+ExeStack:
+
+SymTable:
+a4v32
+Message:
+10 30 32 30 
+Heap:
+4 -> 30
+FileTable:
+
+

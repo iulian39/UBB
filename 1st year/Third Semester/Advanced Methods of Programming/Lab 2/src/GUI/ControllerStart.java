@@ -35,6 +35,7 @@ public class ControllerStart {
         FileTable<Integer,  FileData> fileTable= new FileTable<>();
         Heap<Integer> heap = new Heap<>();
         int id = IdGenerator.generateId();
+        _exeStack.push(prg);
 
         PrgState prgState = new PrgState(_exeStack, _symbolTable,_messages,prg,fileTable,heap,id);
         Repo repo = new Repo(prgState, "log.txt");

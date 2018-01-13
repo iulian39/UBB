@@ -113,12 +113,58 @@ public class Controller implements Observer<PrgState> {
         });
 
         this.heapTableModel = FXCollections.observableArrayList();
+        TableColumn<Map.Entry<Integer, Integer>, String> first = new TableColumn<>("Address");
+        TableColumn<Map.Entry<Integer, Integer>, String> second = new TableColumn<>("Value");
+        first.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Map.Entry<Integer, Integer>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<Map.Entry<Integer, Integer>, String> param) {
+                return new SimpleStringProperty(String.valueOf(param.getValue().getKey()));
+            }
+        });
+        second.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Map.Entry<Integer, Integer>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<Map.Entry<Integer, Integer>, String> param) {
+                return new SimpleStringProperty(String.valueOf(param.getValue().getValue()));
+            }
+        });
+        this.HeapTable.getColumns().setAll(first, second);
         this.HeapTable.setItems(this.heapTableModel);
 
         this.fileTableModel = FXCollections.observableArrayList();
+        TableColumn<MyDictionary<Integer, String>, String> fd = new TableColumn<>("File descriptor");
+        TableColumn<MyDictionary<Integer, String>, String> fn = new TableColumn<>("File name");
+        fd.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<MyDictionary<Integer, String>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<MyDictionary<Integer, String>, String> param) {
+                return new SimpleStringProperty(String.valueOf(param.getValue().getAll().keySet()));
+            }
+        });
+        fn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<MyDictionary<Integer, String>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<MyDictionary<Integer, String>, String> param) {
+                return new SimpleStringProperty(String.valueOf(param.getValue().getAll().values()));
+            }
+        });
+
+        this.FileTableTV.getColumns().setAll(fd, fn);
         this.FileTableTV.setItems(this.fileTableModel);
 
         this.symTableModel = FXCollections.observableArrayList();
+        TableColumn<MyDictionary<String, Integer>, String> symNameColumn = new TableColumn<>("Symbol name");
+        TableColumn<MyDictionary<String, Integer>, String> symValueColumn = new TableColumn<>("Value");
+        symNameColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<MyDictionary<String, Integer>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<MyDictionary<String, Integer>, String> param) {
+                return new SimpleStringProperty(String.valueOf(param.getValue().getAll().keySet()));
+            }
+        });
+        symValueColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<MyDictionary<String, Integer>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<MyDictionary<String, Integer>, String> param) {
+                return new SimpleStringProperty(String.valueOf(param.getValue().getAll().values()));
+            }
+        });
+        this.SymbolTV.getColumns().setAll(symNameColumn, symValueColumn);
         this.SymbolTV.setItems(this.symTableModel);
 
         this.outListModel = FXCollections.observableArrayList();
@@ -131,16 +177,17 @@ public class Controller implements Observer<PrgState> {
         this.PrgStatesIdentifiersLV.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<PrgState>() {
             @Override
             public void changed(ObservableValue<? extends PrgState> observable, PrgState oldValue, PrgState newValue) {
-                programId = newValue.getId();
-                List<PrgState> prgStates = prgStateService.getAll();
-                PrgState current = prgStates.stream().filter(e -> e.getId() == programId).findFirst().get();
+               try {
+                   programId = newValue.getId();
+                   List<PrgState> prgStates = prgStateService.getAll();
+                   PrgState current = prgStates.stream().filter(e -> e.getId() == programId).findFirst().get();
 
-                List<IStatement> list = new ArrayList<>();
-                for(IStatement stm: current.get_exeStack().getAll())
-                    list.add(stm);
-                Collections.reverse(list);
-                exeStackModel.setAll(list);
-                //symTableModel.setAll(current.get_symbolTable().clone().getAll().entrySet().stream().map(e->new MyDictionary<String, Integer>(e.getKey(), e.getValue())).collect(Collectors.toCollection((Collectors.toList()))));
+                   List<IStatement> list = new ArrayList<>();
+                   for (IStatement stm : current.get_exeStack().getAll())
+                       list.add(stm);
+                   exeStackModel.setAll(list);
+                   symTableModel.setAll(current.get_symbolTable().clone().getAll().entrySet().stream().map(e -> new MyDictionary<>(e.getKey(), e.getValue())).collect((Collectors.toList())));
+               }catch(Exception e){}
             }
         });
 
@@ -201,6 +248,7 @@ public class Controller implements Observer<PrgState> {
         }
         //Save the current programs in the repository
         repo.setPrgList(prgList);
+        this.prgStateService.notifyObservers();
     }
 
     public void allStep() throws IOException, InterruptedException {
@@ -243,19 +291,22 @@ public class Controller implements Observer<PrgState> {
         this.prgStateModel.setAll(prgStates);
         this.outListModel.setAll(this.prgStateService.getOutList());
         this.heapTableModel.setAll(this.prgStateService.getHeapList());
+        this.fileTableModel.setAll(this.prgStateService.getFileList());
 
-        this.fileTableModel.setAll( prgStates.get(0).getFileTable().keys()
-                .stream()
-                .map(k -> new MyDictionary<Integer, String>(k, prgStates.get(0).getFileTable().get(k).getFileName()))
-                .collect(Collectors.toList())
-        );
 
-        PrgState current = prgStates.stream().filter(e->e.getId() == programId).findFirst().get();
 
-        List<IStatement> list = current.get_exeStack().toStack().stream().collect(Collectors.toList());
-        Collections.reverse(list);
-        this.exeStackModel.setAll(list);
-        this.symTableModel.setAll(current.get_symbolTable().clone().getAll().entrySet().stream().map(e->new MyDictionary<String, Integer>(e.getKey(), e.getValue())).collect(Collectors.toList()));
+        try {
+            PrgState current = prgStates.stream().filter(e -> e.getId() == programId).findFirst().get();
+            List<IStatement> list = current.get_exeStack().toStack().stream().collect(Collectors.toList());
+            Collections.reverse(list);
+            this.exeStackModel.setAll(list);
+            this.symTableModel.setAll(current.get_symbolTable().clone().getAll().entrySet().stream().map(e->new MyDictionary<String, Integer>(e.getKey(), e.getValue())).collect(Collectors.toList()));
+        }catch ( Exception e )
+        {
+            System.out.println(e.getMessage());
+        }
+
+
     }
 
 

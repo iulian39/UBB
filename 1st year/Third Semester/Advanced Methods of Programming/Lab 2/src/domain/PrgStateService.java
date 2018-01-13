@@ -33,6 +33,7 @@ public class PrgStateService implements Observable<PrgState> {
 
     public List<MyDictionary<Integer, String>> getFileList() {
         List<MyDictionary<Integer, String>> mList = new ArrayList<>();
+
         for(Integer x : this.repo.getPrgList().get(0).getFileTable().keys())
             mList.add(new MyDictionary(x, this.repo.getPrgList().get(0).getFileTable().get(x).getFileName()));
         return mList;
