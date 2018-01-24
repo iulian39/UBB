@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -10,7 +13,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
    <center>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -49,15 +52,25 @@
             <Label prefHeight="17.0" prefWidth="88.0" text="Symbol Table" />
             <Separator prefHeight="4.0" prefWidth="103.0" />
             <Label text="Out " />
-            <Separator layoutX="10.0" layoutY="10.0" prefHeight="7.0" prefWidth="117.0" />
+            <Separator layoutX="10.0" layoutY="10.0" prefHeight="9.0" prefWidth="146.0" />
             <Label text="Program IDs" />
-            <Separator layoutX="210.0" layoutY="10.0" prefHeight="12.0" prefWidth="92.0" />
+            <Separator layoutX="210.0" layoutY="10.0" prefHeight="12.0" prefWidth="50.0" />
             <Label text="Heap Table" />
-            <Separator prefHeight="0.0" prefWidth="81.0" />
+            <Separator prefHeight="4.0" prefWidth="79.0" />
             <Label text="FileTable" />
-            <Separator prefHeight="0.0" prefWidth="178.0" />
+            <Separator prefHeight="0.0" prefWidth="52.0" />
+            <Label fx:id="errorLabel" textFill="#f80303" />
+            <Separator prefHeight="15.0" prefWidth="58.0" />
             <Button fx:id="btnRun" mnemonicParsing="false" onAction="#allStepsGUI" prefHeight="25.0" prefWidth="110.0" text="Run one step" />
          </children>
       </HBox>
    </bottom>
+   <right>
+      <TableView fx:id="LatchTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="98.0" text="location" />
+          <TableColumn prefWidth="101.0" text="value" />
+        </columns>
+      </TableView>
+   </right>
 </BorderPane>

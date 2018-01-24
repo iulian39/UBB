@@ -10,4 +10,6 @@ public interface IRepo {
     public void setPrgList(List<PrgState> _prgStateList);
     public List<PrgState> getPrgList();
     public void logPrgStateExec(PrgState p) throws IOException;
+    public void serialize();
+    public void deserialize();
 }

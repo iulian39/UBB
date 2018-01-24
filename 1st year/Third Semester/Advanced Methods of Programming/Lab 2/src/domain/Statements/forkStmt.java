@@ -17,7 +17,7 @@ public class forkStmt implements IStatement {
         public PrgState execute(PrgState state) {
             MyStack<IStatement> s = new MyStack<>();
             s.push(stmt);
-            PrgState forkProgram = new PrgState(s, state.get_symbolTable().clone(), state.get_messages(), this.stmt, state.getFileTable(), state.getHeap(), state.getId() * 10 + IdGenerator.generateId());
+            PrgState forkProgram = new PrgState(s, state.get_symbolTable().clone(), state.get_messages(), this.stmt, state.getFileTable(), state.getHeap(), state.getId() * 10 + IdGenerator.generateId(), state.getLatchTable());
             return forkProgram;
         }
 

@@ -9,6 +9,7 @@ import java.util.*;
 public class PrgStateService implements Observable<PrgState> {
     private List<Observer<PrgState>> observers = new ArrayList<Observer<PrgState>>();
     private Repo repo;
+    private Collection<? extends MyDictionary<Integer, Integer>> latchList;
 
     public PrgStateService(Repo repo) {
         this.repo = repo;
@@ -36,6 +37,13 @@ public class PrgStateService implements Observable<PrgState> {
 
         for(Integer x : this.repo.getPrgList().get(0).getFileTable().keys())
             mList.add(new MyDictionary(x, this.repo.getPrgList().get(0).getFileTable().get(x).getFileName()));
+        return mList;
+    }
+
+    public List<MyDictionary<Integer, Integer>> getLatchList() {
+        List<MyDictionary<Integer, Integer>> mList = new ArrayList<>();
+        for(Integer key : repo.getPrgList().get(0).getLatchTable().keys())
+            mList.add(new MyDictionary(key, repo.getPrgList().get(0).getLatchTable().get(key)));
         return mList;
     }
 

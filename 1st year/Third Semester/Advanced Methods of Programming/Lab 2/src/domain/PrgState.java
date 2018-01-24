@@ -14,6 +14,7 @@ public class PrgState {
     private IStatement _stmt;
     private FileTable<Integer,  FileData> fileTable;
     private Heap<Integer> heap;
+    private LatchTable latchTable;
 
     public PrgState(MyStack<IStatement> exeStack, MyDictionary<String, Integer> symTable, MyList<Integer> list, IStatement stmt, FileTable<Integer,  FileData> fileTable, Heap<Integer> heap, int id) {
         this._exeStack = exeStack;
@@ -23,6 +24,17 @@ public class PrgState {
         this.fileTable = fileTable;
         this.heap = heap;
         this.id = id;
+    }
+
+    public PrgState(MyStack<IStatement> exeStack, MyDictionary<String, Integer> symTable, MyList<Integer> list, IStatement stmt, FileTable<Integer,  FileData> fileTable, Heap<Integer> heap, int id, LatchTable latchTable) {
+        this._exeStack = exeStack;
+        this._symbolTable = symTable;
+        this._messages = list;
+        this._stmt = stmt;
+        this.fileTable = fileTable;
+        this.heap = heap;
+        this.id = id;
+        this.latchTable = latchTable;
     }
 
     public PrgState(IStatement prg) {
@@ -78,6 +90,14 @@ public class PrgState {
 
     public int getId() {
         return id;
+    }
+
+    public LatchTable getLatchTable() {
+        return latchTable;
+    }
+
+    public void setLatchTable(LatchTable latchTable) {
+        this.latchTable = latchTable;
     }
 
     public void setId(int id) {

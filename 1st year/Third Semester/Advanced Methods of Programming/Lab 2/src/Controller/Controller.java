@@ -39,6 +39,7 @@ public class Controller implements Observer<PrgState> {
     private ObservableList<MyDictionary<Integer, String>> fileTableModel;
     private ObservableList<IStatement> exeStackModel;
     private ObservableList<MyDictionary<String, Integer>> symTableModel;
+    private ObservableList<MyDictionary<Integer, Integer>> latchTableModel;
     private int programId;
 
     @FXML
@@ -59,9 +60,13 @@ public class Controller implements Observer<PrgState> {
     private Button btnRun;
     @FXML
     private TextField PrgStatesTF;
+    @FXML
+    private Label errorLabel;
 
     @FXML
     private TableView<Map.Entry<Integer, Integer>> HeapTable;
+    @FXML
+    private TableView<MyDictionary<Integer, Integer>> LatchTable;
 
 
     public Controller(Repo r) {
@@ -130,6 +135,25 @@ public class Controller implements Observer<PrgState> {
         this.HeapTable.getColumns().setAll(first, second);
         this.HeapTable.setItems(this.heapTableModel);
 
+
+        this.latchTableModel = FXCollections.observableArrayList();
+        TableColumn<MyDictionary<Integer, Integer>, String> latchId = new TableColumn<>("Location");
+        TableColumn<MyDictionary<Integer, Integer>, String> latchCount = new TableColumn<>("Value");
+        latchId.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<MyDictionary<Integer, Integer>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<MyDictionary<Integer, Integer>, String> param) {
+                return new SimpleStringProperty(String.valueOf(param.getValue().getAll().keySet()));
+            }
+        });
+        latchCount.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<MyDictionary<Integer, Integer>, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<MyDictionary<Integer, Integer>, String> param) {
+                return new SimpleStringProperty(String.valueOf(param.getValue().getAll().values()));
+            }
+        });
+        this.LatchTable.getColumns().setAll(latchId, latchCount);
+        this.LatchTable.setItems(this.latchTableModel);
+
         this.fileTableModel = FXCollections.observableArrayList();
         TableColumn<MyDictionary<Integer, String>, String> fd = new TableColumn<>("File descriptor");
         TableColumn<MyDictionary<Integer, String>, String> fn = new TableColumn<>("File name");
@@ -178,6 +202,7 @@ public class Controller implements Observer<PrgState> {
             @Override
             public void changed(ObservableValue<? extends PrgState> observable, PrgState oldValue, PrgState newValue) {
                try {
+                   errorLabel.setText("");
                    programId = newValue.getId();
                    List<PrgState> prgStates = prgStateService.getAll();
                    PrgState current = prgStates.stream().filter(e -> e.getId() == programId).findFirst().get();
@@ -292,24 +317,22 @@ public class Controller implements Observer<PrgState> {
         this.outListModel.setAll(this.prgStateService.getOutList());
         this.heapTableModel.setAll(this.prgStateService.getHeapList());
         this.fileTableModel.setAll(this.prgStateService.getFileList());
-
+        this.latchTableModel.setAll(this.prgStateService.getLatchList());
 
 
         try {
             PrgState current = prgStates.stream().filter(e -> e.getId() == programId).findFirst().get();
             List<IStatement> list = current.get_exeStack().toStack().stream().collect(Collectors.toList());
-            Collections.reverse(list);
+
             this.exeStackModel.setAll(list);
             this.symTableModel.setAll(current.get_symbolTable().clone().getAll().entrySet().stream().map(e->new MyDictionary<String, Integer>(e.getKey(), e.getValue())).collect(Collectors.toList()));
         }catch ( Exception e )
         {
-            System.out.println(e.getMessage());
+            errorLabel.setText("SELECT A PROGRAM ID");
         }
 
 
     }
-
-
 
 
 //    public void executeAll()  throws NotDeclaredVariable, DivideByZeroException, FileAlreadyOpenedException, FileNotOpenException, IOException

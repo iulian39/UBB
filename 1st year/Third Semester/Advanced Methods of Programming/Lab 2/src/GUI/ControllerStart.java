@@ -34,10 +34,12 @@ public class ControllerStart {
         MyList<Integer> _messages =new MyList<>();
         FileTable<Integer,  FileData> fileTable= new FileTable<>();
         Heap<Integer> heap = new Heap<>();
+        LatchTable latch = new LatchTable();
         int id = IdGenerator.generateId();
         _exeStack.push(prg);
 
-        PrgState prgState = new PrgState(_exeStack, _symbolTable,_messages,prg,fileTable,heap,id);
+
+        PrgState prgState = new PrgState(_exeStack, _symbolTable,_messages,prg,fileTable,heap,id, latch);
         Repo repo = new Repo(prgState, "log.txt");
         return repo;
     }
@@ -178,6 +180,110 @@ public class ControllerStart {
                 )
         );
 
+        /*
+        v=0;
+        (repeat (fork(print(v);v=v-1);v=v+1) until v==3);
+        x=1;y=2;z=3;w=4;
+        print(v*10)
+         */
+        IStatement Ex1 = new CompoundStatement(
+                new AssignStatement("v", new ConstExpression(0)),
+                new CompoundStatement(
+                        new RepeatStmt(
+                                new CompoundStatement(
+                                        new forkStmt(
+                                                new CompoundStatement(
+                                                        new PrintStatement(new VarExpression("v")),
+                                                        new AssignStatement("v", new ArithmeticExpression('-', new VarExpression("v"), new ConstExpression(1)))
+                                                )),
+                                        new AssignStatement("v", new ArithmeticExpression('+', new VarExpression("v"), new ConstExpression(1)))
+                                ),
+                                new BolleanExpression("==", new VarExpression("v"), new ConstExpression(3))
+                        ),
+                        new CompoundStatement(
+                                new AssignStatement("x", new ConstExpression(1)),
+                                new CompoundStatement(
+                                        new AssignStatement("y", new ConstExpression(2)),
+                                        new CompoundStatement(
+                                                new AssignStatement("z", new ConstExpression(3)),
+                                                new CompoundStatement(
+                                                        new AssignStatement("w", new ConstExpression(4)),
+                                                        new PrintStatement(new ArithmeticExpression('*', new VarExpression("v"), new ConstExpression(10)))
+                                                )
+                                        )
+
+                                )
+                        )
+                )
+        );
+
+        /*new(v1,2);new(v2,3);new(v3,4);newLatch(cnt,rH(v2));
+        fork(wh(v1,rh(v1)*10));print(rh(v1));countDown(cnt);
+        fork(wh(v2,rh(v2)*10));print(rh(v2));countDown(cnt);
+        fork(wh(v3,rh(v3)*10));print(rh(v3));countDown(cnt))));
+        await(cnt);
+        print(100);
+        countDown(cnt);
+        print(100)
+        The final Out should be {20,id-first-child,30,id-second-child,40, id-third-child,
+        100,100} where id-first-child, id-second-child and id-third-child are the unique
+        identifiers of those three new threads created by fork.*/
+        IStatement examEx2 = new CompoundStatement(
+                new newH("v1", new ConstExpression(2)),
+                new CompoundStatement(
+                        new newH("v2", new ConstExpression(3)),
+                        new CompoundStatement(
+                                new newH("v3", new ConstExpression(4)),
+                                new CompoundStatement(
+                                        new NewLatchStmt("cnt", new readH("v2")),
+                                        new CompoundStatement(
+                                                new forkStmt(
+                                                        new CompoundStatement(
+                                                                new writeH("v1", new ArithmeticExpression('*', new readH("v1"), new ConstExpression(10))),
+                                                                new CompoundStatement(
+                                                                        new PrintStatement(new readH("v1")),
+                                                                        new CountDownStmt("cnt")
+                                                                )
+                                                        )
+                                                ),
+                                                new CompoundStatement(
+                                                        new forkStmt(
+                                                                new CompoundStatement(
+                                                                        new writeH("v2", new ArithmeticExpression('*', new readH("v2"), new ConstExpression(10))),
+                                                                        new CompoundStatement(
+                                                                                new PrintStatement(new readH("v2")),
+                                                                                new CountDownStmt("cnt")
+                                                                        )
+                                                                )
+                                                        ),
+                                                        new CompoundStatement(
+                                                                new forkStmt(
+                                                                        new CompoundStatement(
+                                                                                new writeH("v3", new ArithmeticExpression('*', new readH("v3"), new ConstExpression(10))),
+                                                                                new CompoundStatement(
+                                                                                        new PrintStatement(new readH("v3")),
+                                                                                        new CountDownStmt("cnt")
+                                                                                )
+                                                                        )
+                                                                ),
+                                                                new CompoundStatement(
+                                                                        new AwaitStmt("cnt"),
+                                                                        new CompoundStatement(
+                                                                                new PrintStatement(new ConstExpression(100)),
+                                                                                new CompoundStatement(
+                                                                                        new CountDownStmt("cnt"),
+                                                                                        new PrintStatement(new ConstExpression(100))
+                                                                                )
+                                                                        )
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+
         ObservableList<String> listItems = FXCollections.observableArrayList();
 
         menu.add(ex1);
@@ -188,6 +294,8 @@ public class ControllerStart {
         menu.add(lab5ex1);
         menu.add(lab7);
         menu.add(lab8ex1);
+        menu.add(Ex1);
+        menu.add(examEx2);
 
         for(IStatement stmt : menu)
         {
@@ -198,20 +306,24 @@ public class ControllerStart {
     }
 
     public void loadMainWindow() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui.fxml"));
-        Parent root1 = fxmlLoader.load();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui.fxml"));
+            Parent root1 = fxmlLoader.load();
 
-        PrgStateService prgStateService = new PrgStateService(getNewRepository(menu.get(listV.getSelectionModel().getSelectedIndex())));
-        Controller ctrl = fxmlLoader.getController();
-        ctrl.setService(prgStateService);
-        prgStateService.addObserver(ctrl);
+            PrgStateService prgStateService = new PrgStateService(getNewRepository(menu.get(listV.getSelectionModel().getSelectedIndex())));
+            Controller ctrl = fxmlLoader.getController();
+            ctrl.setService(prgStateService);
+            prgStateService.addObserver(ctrl);
 
 
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }catch ( Exception e){
+            System.out.println("Invalid index");
+        }
 
-        Stage stage = new Stage();
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setScene(new Scene(root1));
-        stage.show();
     }
 
 }
